@@ -33,6 +33,7 @@
 - [x] Сделан первый осмысленный commit
 - [x] Создан и запущен первый backend на Node.js
 - [x] Frontend подключён к backend и показывает реальный HTTP STATUS: 200
+- [x] Backend проверяет URL, введённый пользователем во frontend
 
 ## NEXT
 
