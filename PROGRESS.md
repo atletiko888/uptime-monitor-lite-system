@@ -34,7 +34,7 @@
 - [x] Создан и запущен первый backend на Node.js
 - [x] Frontend подключён к backend и показывает реальный HTTP STATUS: 200
 - [x] Backend проверяет URL, введённый пользователем во frontend
-
+- [x] Освоен базовый Git workflow: status, add, diff, commit, log, restore и .gitignore
 ## NEXT
 
 > Создать рабочую папку/репозиторий `uptime-monitor-lite`, добавить эти Markdown-файлы и проверить их через `git status`.
