@@ -5,18 +5,27 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Page Title</title>
-    <link rel='stylesheet' href='main.css'>
+    
 </head>
 <body>
     <h1>Uptime Monitor Lite</h1>
     <input id="urlInput" type="url" placeholder="https://example.com">
     <button id="checkButton">Check</button>
     <p id="status">Status: not checked</p>
-</body>
-    <script>
+    <h2>History</h2>
+            <pre id="history"></pre>
+         <script>
         const statusText = document.getElementById("status");
         const checkButton = document.getElementById("checkButton");
         const urlInput = document.getElementById("urlInput");
+            const historyText = document.getElementById("history");
+            fetch("http://localhost:3000/history")
+                .then(response => response.json())
+                .then(data => {
+                    historyText.textContent = data 
+                        .map(item => `${item.url} - STATUS ${item.status} - ${new Date(item.checkedAt).toLocaleString()}`)
+                        .join("\n");
+                });
         checkButton.addEventListener("click", () => 
             {const url = urlInput.value;
             if (url === "") {
@@ -32,4 +41,7 @@
         
         
     </script>
+</body>
+            
+   
 </html>
