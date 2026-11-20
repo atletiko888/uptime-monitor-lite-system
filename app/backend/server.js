@@ -12,7 +12,12 @@ const server = http.createServer((req, res) => {
     }
 
     const requestUrl = new URL(req.url, "http://localhost:3000");
-    const inputUrl = requestUrl.searchParams.get("url") || "https://example.com";
+    const inputUrl = requestUrl.searchParams.get("url");
+        if (!inputUrl) {
+            res.statusCode = 400;
+            res.end("URL is required");
+            return;
+        }
     const targetUrl = inputUrl.startsWith("http") ? inputUrl : `https://${inputUrl}`; 
 
     https.get(targetUrl, (response) => {
