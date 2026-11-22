@@ -37,6 +37,8 @@
 - [x] Освоен базовый Git workflow: status, add, diff, commit, log, restore и .gitignore
 - [x] История проверок сохраняется в checks.json и доступна через /history
 - [x] Завершён этап хранения данных: история сохраняется, доступна через /history и отображается на frontend
+- [x] Backend контейнеризирован в Docker и успешно работает через localhost:3001
+
 ## NEXT
 
 > Создать рабочую папку/репозиторий `uptime-monitor-lite`, добавить эти Markdown-файлы и проверить их через `git status`.
